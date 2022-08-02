@@ -17,13 +17,13 @@ fn bfs(
   let mut visited = vec![false; graph.size];
 
   // The start is the first to be visited and the distance
-	// from the start to itself is 0.
+  // from the start to itself is 0.
   visited[start] = true;
   distance[start] = 0;
   queue.push_back(start);
 
   // Standard BFS algorithm
-	// See https://en.wikipedia.org/wiki/Breadth-first_search.
+  // See https://en.wikipedia.org/wiki/Breadth-first_search.
   while let Some(current) = queue.pop_front() {
     for vertex in graph.get_neighbors(current) {
       if !visited[*vertex] {
